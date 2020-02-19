@@ -1,0 +1,150 @@
+Output for the sample input given
+
+BFS Output
+Number of states enqueued is 14
+Total number of moves 4
+
+Path from input to goal state is
+------------------------
+* 1 3 
+4 2 5 
+7 8 6 
+Action: RIGHT
+------------------------
+1 * 3
+4 2 5
+7 8 6
+Action: DOWN
+------------------------
+1 2 3
+4 * 5
+7 8 6
+Action: RIGHT
+------------------------
+1 2 3
+4 5 *
+7 8 6
+Action: DOWN
+------------------------
+1 2 3
+4 5 6
+7 8 *
+
+
+IDS Output
+Number of states enqueued is 32
+Total number of moves 4
+
+Path from input to goal state is
+------------------------
+* 1 3
+4 2 5
+7 8 6
+Action: RIGHT
+------------------------
+1 * 3
+4 2 5
+7 8 6
+Action: DOWN
+------------------------
+1 2 3
+4 * 5
+7 8 6
+Action: RIGHT
+------------------------
+1 2 3
+4 5 *
+7 8 6
+Action: DOWN
+------------------------
+1 2 3
+4 5 6
+7 8 *
+
+
+astar search with heuristic1
+Number of states enqueued is 4
+Total number of moves 4
+
+Path from input to goal state is
+------------------------
+* 1 3 
+4 2 5 
+7 8 6 
+Action: RIGHT
+------------------------
+1 * 3
+4 2 5
+7 8 6
+Action: DOWN
+------------------------
+1 2 3
+4 * 5
+7 8 6
+Action: RIGHT
+------------------------
+1 2 3
+4 5 *
+7 8 6
+Action: DOWN
+------------------------
+1 2 3
+4 5 6
+7 8 *
+
+
+astar search with heuristic2
+Number of states enqueued is 4
+Total number of moves 4
+
+Path from input to goal state is
+------------------------
+* 1 3 
+4 2 5 
+7 8 6 
+Action: RIGHT
+------------------------
+1 * 3
+4 2 5
+7 8 6
+Action: DOWN
+------------------------
+1 2 3
+4 * 5
+7 8 6
+Action: RIGHT
+------------------------
+1 2 3
+4 5 *
+7 8 6
+Action: DOWN
+------------------------
+1 2 3 
+4 5 6 
+7 8 * 
+
+---------------------------------------------------------------------------------------------
+Two heuristics used for astar search are:
+heuristic1 is number of tiles in wrong position. 
+For the sample input given in the assignment, heuristic1 is 4
+
+heuristic2 is the sum of Manhattan distances of all tiles from their goal
+positions.
+For the sample input given in the assignment, heuristic2 is 1+1+1+1 = 4
+
+---------------------------------------------------------------------------------------------
+Performance Analysis of the above two heuristics used:
+Greater the depth more number of states are enqueued/expanded in heuristic1 than heuristic2. This indicates that
+heuristic2 is better for search.
+
+Example:- For the following input
+4 1 2
+6 3 *
+7 5 8
+
+Optimal goal node is found at depth 9 by both the heuristics.
+The number of states enqueued for astar search with heuristic1 is 22.
+The number of states enqueued for astar search with heuristic2 is 11.
+
+Twice the number of nodes are expanded/enqueued with astar search heuristic1 when compared to heuristic2. This shows
+the optimality of astar with heuristic2.
